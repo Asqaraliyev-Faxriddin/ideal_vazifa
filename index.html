@@ -1,14 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mortgage Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gradient-to-b from-sky-50 to-sky-100 min-h-screen flex items-center justify-center p-4">
 
-<h1>salom</h1>
-
+  <div class="bg-white rounded-2xl shadow-lg max-w-5xl w-full grid md:grid-cols-2 overflow-hidden">
     
+    <div class="p-6 p-10">
+      <div class="flex items-center justify-between">
+        <h1 class="text-xl font-bold text-gray-800">Mortgage Calculator</h1>
+        <a href="#" class="text-gray-500 underline text-sm">Clear All</a>
+      </div>
+
+      <div class="mt-6">
+        <label class="block text-gray-600 text-sm">Mortgage Amount</label>
+        <div class="flex">
+          <span class="bg-sky-50 border border-r-0 border-gray-300 px-3 flex items-center text-gray-600">£</span>
+          <input type="number" class="flex-1 border border-gray-300 px-3 py-2 outline-none focus:border-sky-500" >
+        </div>
+      </div>
+
+      <div class="mt-6 flex gap-4">
+        <div class="flex-1">
+          <label class="block text-gray-600 text-sm">Mortgage Term</label>
+          <div class="flex">
+            <input type="number" class="flex-1 border border-gray-300  py-2 outline-none focus:border-sky-500" >
+            <span class="bg-sky-50 border border-l-0 border-gray-300  flex items-center text-gray-600">years</span>
+          </div>
+        </div>
+        <div class="flex-1">
+          <label class="block text-gray-600 text-sm">Interest Rate</label>
+          <div class="flex">
+            <input type="number" class =" border border-gray-300 px-3 py-2 outline-none" >
+            <span class="bg-sky-50 border border-l-0 border-gray-300 px-3 flex items-center text-gray-600">%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <label class="block text-gray-600 text-sm mb-2">Mortgage Type</label>
+        <div class="space-y-3">
+          <label class="flex items-center border border-gray-300 p-3 rounded cursor-pointer hover:border-sky-500">
+            <input type="radio" name="type" class="mr-3">
+            Repayment
+          </label>
+          <label class="flex items-center border border-gray-300 p-3 rounded cursor-pointer hover:border-sky-500">
+            <input type="radio" name="type" class="mr-3">
+            Interest Only
+          </label>
+        </div>
+      </div>
+
+      <button class="mt-6 w-full bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-semibold py-3 rounded flex items-center justify-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h1l2 9h11l2-9h1M16 6V4a2 2 0 00-2-2H9a2 2 0 00-2 2v2m0 0H5m2 0h10" />
+        </svg>
+        Calculate Repayments
+      </button>
+    </div>
+
+    <div class="bg-[#0A3140] text-white flex flex-col items-center justify-center p-8 text-center">
+      <img src="./images/illustration-empty.svg" alt="calculator" class="w-32 mb-6">
+      <h2 class="text-lg font-semibold">Results shown here</h2>
+      <p class="text-gray-300 text-sm mt-2">Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
+    </div>
+
+  </div>
+
 </body>
 </html>
